@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jct.dao.CountryDao">
+
+    <resultMap id="rr" type="com.jct.bean.Country">
+        <id property="id" column="id"/>
+        <result property="countryName" column="countryname"/>
+        <result property="countryCode" column="countrycode"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="rr">
+        select id , countryname , countrycode from country
+    </select>
+</mapper>
